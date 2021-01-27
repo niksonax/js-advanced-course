@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS-ADV. Lesson 1. Task 3</title>
+  </head>
+  <body>
+    <div class="wrap" id="app"></div>
+
+    <script>
+      /*
+      Задание:
+      Сложить в элементе с id App следующую размету HTML:
+
+      <header>
+        <a href="http://google.com.ua">
+          <img src="https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        </a>
+        <div class="menu">
+          <a href="#1"> link 1</a>
+          <a href="#1"> link 2</a>
+          <a href="#1"> link 3</a>
+        </div>
+      </header>
+
+      Используя следующие методы для работы:
+      getElementById
+      createElement
+      element.innerText
+      element.className
+      element.setAttribute
+      element.appendChild
+
+  */
+      // Creating HTML elements
+      const app = document.getElementById("app");
+      const header = document.createElement("header");
+      const link = document.createElement("a");
+      link.href = "http://google.com.ua";
+      const image = document.createElement("img");
+      image.src =
+        "https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+      const divMenu = document.createElement("div");
+      divMenu.classList.add("menu");
+
+      // Grouping HTML elemnts (from inner to outter)
+      link.appendChild(image);
+
+      header.appendChild(link);
+      for (let i = 0; i < 3; i++) {
+        const divLink = document.createElement("a");
+        divLink.href = "#1";
+        divLink.innerText = ` link ${i + 1}`;
+        divMenu.appendChild(divLink);
+      }
+      header.appendChild(divMenu);
+
+      app.appendChild(header);
+    </script>
+  </body>
+</html>
