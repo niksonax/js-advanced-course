@@ -34,6 +34,15 @@
       метода Number.toString( 16 ) https://www.w3schools.com/jsref/jsref_tostring_number.asp,
 */
 
+document.addEventListener(
+  "DOMContentLoaded",
+  function applyRandomColorOnReaload() {
+    const wrapper = document.querySelector(".wrap");
+    const hexColor = colorToHex(randomColor());
+    wrapper.style.background = hexColor;
+  }
+);
+
 function randomColor() {
   let color = [];
   for (let i = 0; i < 3; i++) {
@@ -43,16 +52,17 @@ function randomColor() {
 }
 
 function colorToHex(rgbColor) {
-  function componentToHex(c) {
-    const hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-  }
   const hexColor = `#${
     componentToHex(rgbColor[0]) +
     componentToHex(rgbColor[1]) +
     componentToHex(rgbColor[2])
   }`;
   return hexColor;
+}
+
+function componentToHex(c) {
+  const hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
 }
 
 const wrapper = document.querySelector(".wrap");
