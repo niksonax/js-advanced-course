@@ -48,6 +48,7 @@ buttons.appendChild(closeButton);
 
 // Event Listener
 buttons.addEventListener("click", function openTab(event) {
+  hideAllTabs();
   const tabButton = event.target;
   if (
     tabButton.nodeName === "BUTTON" &&
@@ -61,10 +62,13 @@ buttons.addEventListener("click", function openTab(event) {
   }
 });
 
-closeButton.addEventListener("click", function hideAllTabs() {
+closeButton.addEventListener("click", hideAllTabs);
+
+// Function
+function hideAllTabs() {
   let tabs = document.getElementById("tabContainer");
   tabs = Array.from(tabs.children);
   for (el in tabs) {
     tabs[el].classList.remove("active");
   }
-});
+}
