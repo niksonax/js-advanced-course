@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>HomeWork-4</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <form id="login-form">
+        <section>
+          Имя пользователя:
+          <input type="text" name="username" minlength="2" required />
+        </section>
+        <section>
+          Email:
+          <input type="email" name="email" minlength="3" required />
+        </section>
+        <section>
+          Пароль:
+          <input
+            type="password"
+            name="password"
+            minlength="8"
+            maxlength="16"
+            required
+          />
+        </section>
+        <section>
+          Кол-во съеденных яблок:
+          <input type="number" name="apples" minlength="1" required />
+        </section>
+        <section>
+          Спасибо за яблоки:
+          <input type="text" name="thank-you" required />
+        </section>
+        <section>
+          Согласен на обучение
+          <input type="checkbox" name="agreement" required />
+        </section>
+
+        <input type="submit" id="submit-btn" />
+      </form>
+
+      <button id="validate-btn">Валидация</button>
+    </div>
+
+    <script src="task.js"></script>
+  </body>
+</html>
