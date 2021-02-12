@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ClassWork-4 Task-4</title>
+  </head>
+  <body>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: whitesmoke;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+      }
+
+      .weather-image {
+        height: 300px;
+        width: 500px;
+      }
+
+      .weather-image img {
+        width: 100%;
+        height: auto;
+        border: 10px solid white;
+      }
+    </style>
+
+    <div class="container">
+      <select id="countries"></select>
+      <br />
+      <div id="cities"></div>
+      <div id="result">
+        <div id="message"></div>
+      </div>
+    </div>
+    <div class="weather-image"></div>
+
+    <script src="task4.js"></script>
+  </body>
+</html>

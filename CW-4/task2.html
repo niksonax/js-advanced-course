@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ClassWork-4 Task-2</title>
+  </head>
+  <body>
+    <div class="Templating">
+      
+      <form>
+        <input type="range" id="myWidth" min="10" max="500" step="10" />
+        <input type="color" id="myColor" min="10" max="500" step="10" />
+        <input type="range" id="myHeight" min="10" max="500" step="10" />
+        <input type="range" id="myBorderRadius" min="10" max="200" step="10" />
+        <input type="range" id="myMargin" min="10" max="500" step="10" />
+      </form>
+
+      <div class="TemplatingResult">
+        <div id="result" class="result"></div>
+      </div>
+    </div>
+
+    <style>
+      #colors {
+        width: 200px;
+
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .result {
+        width: 50px;
+        background: gray;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      #MyValidateForm {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #MyValidateForm input {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+      }
+      .circle {
+        width: 30px;
+        height: 30px;
+        background: #eee;
+        border-radius: 50%;
+      }
+
+    </style>
+
+    <script src='task2.js'></script>
+    </script>
+  </body>
+</html>
