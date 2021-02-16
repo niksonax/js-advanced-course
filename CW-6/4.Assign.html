@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Classwork</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="assigned">
+        <form class="ObjForm1">
+          <input name="key" placeholder="Enter your key" />
+          <input name="value" placeholder="Enter your value" />
+          <button type="submit">Send</button>
+        </form>
+        <div class="createResult">
+          <header>Created Object</header>
+          <div class="createdObj1">
+            <code> </code>
+          </div>
+        </div>
+      </div>
+
+      <div class="assigned">
+        <form class="ObjForm2">
+          <input name="key" placeholder="Enter your key" />
+          <input name="value" placeholder="Enter your value" />
+          <button type="submit">Send</button>
+        </form>
+        <div class="createResult">
+          <header>Created Object</header>
+          <div class="createdObj2">
+            <code> </code>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resultBlock">
+      <button>Combine Objects!</button>
+      <h3>Result:</h3>
+      <div id="result">
+        <code> </code>
+      </div>
+    </div>
+
+    <script></script>
+    <style>
+      .wrap {
+        width: 800px;
+        display: flex;
+      }
+      .ObjForm,
+      .resultBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 10px 20px;
+      }
+
+      .assigned {
+        width: 300px;
+        display: flex;
+      }
+      .createResult header {
+        font-weight: 700;
+      }
+    </style>
+    <script src="Task4.js"></script>
+  </body>
+</html>
