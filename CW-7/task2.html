@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Constructors</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+    </style>
+    <div class="wrap">
+      <header>
+        <form class="send-message-form">
+          <label for="author">
+            <span>Author</span>
+            <select id="author" name="author">
+              <option value="Taras Shevchenko">Taras Shevchenko</option>
+              <option value="Ivan Franko">Ivan Franko</option>
+              <option value="Vasyl Stys">Vasyl Stys</option>
+              <option value="Oles Gonchar">Oles Gonchar</option>
+            </select>
+          </label>
+
+          <label for="message">
+            <span>Message</span>
+            <textarea placeholder="Your Message" id="message"></textarea>
+          </label>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </header>
+
+      <section>
+        <ul id="message_list">
+          <!-- <li>
+            <div class="message__date">27/01/2018</div>
+            <div class="message__author">
+              <b>Ivan Franko</b>
+            </div>
+            <div class="message__text">Ночі безмірнії, ночі безсоннії...</div>
+            <div class="message__controls">
+              <button class="_skipMessage">Skip</button>
+              <button class="_answerMessage">Answer</button>
+            </div>
+            <div class="message__answer">
+              <input type="text" />
+              <button class="answer-btn">Post Answer</button>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+    </div>
+
+    <script src="task2.js"></script>
+  </body>
+</html>
