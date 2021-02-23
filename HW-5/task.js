@@ -65,8 +65,8 @@ function CommentsSection(comments) {
   this.comments = comments;
 
   this.renderComments = () => {
+    commentsFeed.innerHTML = "";
     this.comments.forEach((comment) => {
-      console.log(this);
       this.commentDiv = document.createElement("div");
       this.commentDiv.classList.add("comment");
 
@@ -82,11 +82,26 @@ function CommentsSection(comments) {
       this.commentText = document.createElement("p");
       this.commentText.innerText = comment.text;
 
-      this.commentTextDiv.append(this.commentUsername, this.commentText);
+      this.commentLikes = document.createElement("span");
+      this.commentLikeBtn = document.createElement("i");
+      this.commentLikeBtn.classList.add("fas", "fa-heart");
+      this.commentLikeBtn.addEventListener("click", () => {
+        comment.addLike();
+        this.renderComments();
+      });
+      this.commentLikesCounter = document.createElement("p");
+      this.commentLikesCounter.innerText = comment.likes;
+
+      this.commentLikes.append(this.commentLikesCounter, this.commentLikeBtn);
+      this.commentTextDiv.append(
+        this.commentUsername,
+        this.commentText,
+        this.commentLikes
+      );
       this.commentDiv.append(this.commentAvatar, this.commentTextDiv);
 
       commentsFeed.append(this.commentDiv);
-    });
+    }, comments);
     return this.commentDiv;
   };
 }
