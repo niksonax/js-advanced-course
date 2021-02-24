@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Homework</title>
-</head>
-<body>
-      <!--
-        Создайте счетчик секунд, который начинает отчет с 1 и заканчивается на 30,
-        также добавьте кнопки который останавливают отчет, и запускают его заново и добавьте кнопку обнуляющую отчет.
-        Также попробуйте изменить код так чтобы отчет начиналься с 30 и заканчивалься на 1.
+  </head>
+  <body>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-       + бонус: Сделать так что бы на каждый тик (1с/2c) менялся цвет фона. Можно на основе генератора случайного цвета с предудущих уроков.
-       + бонус: Сделать визуализацию стрелки которая идет по кругу
-            document.getElementById("myDIV").style.transform = "rotate(7deg)";
+      .timer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
 
-       + бонус: Сделать кнопки которые выбирают режим в котором идет отсчет - обычный от 0 до 30 или реверсивный от 30 до 0
-      -->
-      <script>
-
-      </script>
-</body>
+    <div class="timer-container">
+      <h3><img src="https://little-bit.com/misc/clock/arrow_black.png" /></h3>
+      <h1 class="timer">00:00</h1>
+      <div class="button-container">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+        <button id="reset-btn">Reset</button>
+        <button id="restart-btn">Restart</button>
+      </div>
+    </div>
+    <script src="Task2.js"></script>
+  </body>
 </html>
