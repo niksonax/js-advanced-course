@@ -30,7 +30,6 @@ async function getCompanies() {
 }
 
 function renderCompanies(array) {
-  //console.log(array);
   companiesList.innerHTML = array
     .map(
       (company, index) =>
@@ -39,12 +38,12 @@ function renderCompanies(array) {
         <div>${index + 1}</div>
         <div>${company.company}</div>
         <div>${company.balance}</div>
-        <div class='register-date' data-date='${company.registered}'>${
+        <div class='register-date' data-date='${
           company.registered
-        }</div>
-        <div class='company-address'  data-address='${company.address.city}'>${
+        }'>Show Date</div>
+        <div class='company-address'  data-address='${
           company.address.city
-        }</div>
+        }'>Show Address</div>
         </div>
         `
     )
@@ -56,9 +55,6 @@ function hideCompaniesData() {
   for (company of companies) {
     const date = company.querySelector(".register-date");
     const address = company.querySelector(".company-address");
-
-    date.innerText = "Show Date";
-    address.innerText = "Show Address";
 
     date.addEventListener("click", function showDate(e) {
       e.target.innerText = e.target.dataset["date"];
