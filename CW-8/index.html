@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassWork-8</title>
+  </head>
+  <body>
+    <style>
+      .companies {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+      }
+      .company-container {
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+      }
+      .company-address {
+        cursor: pointer;
+      }
+
+      .register-date:hover {
+        cursor: pointer;
+      }
+    </style>
+
+    <form id="first-form">
+      <input name="name" />
+      <input name="age" />
+      <input name="password" />
+      <button id="submit-first-form">Collect Data</button>
+    </form>
+
+    <form id="second-form">
+      <input value='{"name" : "23123", "age": 15, "password": "*****" }' />
+      <button id="submit-second-form">JSON.parse</button>
+    </form>
+
+    <div class="task3">
+      <h3>Companies:</h3>
+      <div class="companies"></div>
+    </div>
+
+    <script src="task1_json.js"></script>
+    <!-- <script src="task2_fetch.js"></script> -->
+    <!-- <script src="task3_async.js"></script> -->
+  </body>
+</html>
