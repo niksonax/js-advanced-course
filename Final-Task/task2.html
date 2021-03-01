@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Finals Task2</title>
+  </head>
+  <body>
+    <form id="MyValidateForm">
+      <input type="text" name="login" placeholder="Ваш логин" />
+      <input type="password" name="pas1" placeholder="Ваш пароль" />
+      <input type="password" name="pas2" placeholder="Повторите пароль" />
+      <label for="agree">
+        <span>Вы согласны с лицензионым соглашением.</span>
+        <input type="checkbox" id="agree" />
+      </label>
+      <input type="submit" id="submit" value="Отправить" disabled />
+    </form>
+
+    <style>
+      #MyValidateForm {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #MyValidateForm input {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+      }
+      .error {
+        border: 1px solid red;
+      }
+      .OK {
+        border: 1px solid green;
+      }
+    </style>
+    <script src="task2.js"></script>
+  </body>
+</html>
